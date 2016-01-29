@@ -3,40 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+	<meta name="description" content="An easy to use webpage">
+	<meta name="author" content="Cristóbal Domínguez">
 
 	<link rel="stylesheet" href="assets/css/style.min.css" />
 	
 	<title>My new one webpage</title>
-	<meta name="description" content="An easy to use webpage">
-	<meta name="author" content="Cristóbal Domínguez">
-
+	
 	<!--[if lt IE 9]>
 	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
 <body>
-	<main>
-		<div class="wrapper">
-			<figure>
-				<a href="/" class="logo"><img src="#" alt=""></a>
-			</figure>
-			<nav>
-				<a href="#">Features</a>
-				<a href="#">Assets</a>
-				<a href="#">Blog</a>
-				<a href="#">Download</a>
-			</nav>
-			<aside class="nav">
-				<a href="#" class="transparent">Log In</a>
-				<a href="#" class="outline white">Sign Up</a>	
-			</aside>
-			<header class="hero">
+	<main class="hero">
+		<div class="navBlock"> <!-- div que tendrá la característica position: fixed una vez que se haga scroll -->
+			<div class="wrapper"> <!-- div que mantendrá centrado y con un ancho máximo el contenido en la página -->
+				<a href="/" class="logo"> 
+					<figure>
+						<img src="#" alt=""> <!-- hay varias técnicas para poner el logo, algunos ponen un jpg, otros ponen un icono o un texto y ultimamente se utiliza un svg -->
+					</figure>
+				</a>
+				<nav>
+					<a href="#">Features</a>
+					<a href="#">Assets</a>
+					<a href="#">Blog</a>
+					<a href="#">Download</a>
+				</nav>
+				<aside class="nav">
+					<a href="#" class="transparent">Log In</a>
+					<a href="#" class="outline white">Sign Up</a>
+				</aside>
+			</div>
+		</div>
+		
+		<header class="hero_content">
+			<div class="wrapper">
 				<h1>Design, collaborate, win!</h1>
 				<h3>Introducing “Sedna”. A responsive one page website, designed &amp; developed by Peter Finlan, exclusively for Codrops.</h3>
 				<a href="#" class="solid">Download</a>
 				<a href="#" class="outline">Learn More</a>
-			</header>
-		</div>
+			</div>
+		</header>
 	</main>
 	<section class="white">
 		<div class="wrapper">
@@ -95,7 +102,7 @@
 			<h2 class="center">Customise Sedna with the included Sketch <span class="number">3</span> file</h2>
 			<p>Change/swap/edit every aspect of Sedna before you hit development with the included Sketch file.</p>
 			<a href="#" class="outline">Download Now!</a>
-			<img src="" alt="" class="icon">
+			<img src="" alt="Diamond icon" class="icon">
 		</div>
 	</aside>
 	<section class="gray">
@@ -111,7 +118,7 @@
 					<dd>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
 				</div>
 			</dl>
-			<ul>
+			<ul> <!-- al parecer se enumeran una cierta cantidad como de características o propiedades, por eso un ul -->
 				<li>
 					<img src="" alt="">
 					<a href="#" class="red">Product</a>
@@ -133,7 +140,7 @@
 	</section>
 	<section class="white">
 		<div class="wrapper">
-			<div class="wrap_slider">
+			<div class="wrap_slider"> <!-- me pareció que lo que se pretendía era mostrar una lista de lo que ciertos expertos comentaban sobre el sitio -->
 				<ul class="slide">
 					<li>
 						<img src="" alt="">
@@ -159,10 +166,8 @@
 			<h2>Get started with Sedna, absolutely free</h2>
 			<p>Grab your copy today, exclusively from Codrops</p>
 			<form action="">
-				<label for="email"></label>
-				<input type="email" name="email" required placeholder="usuario@correo.cl" autocomplete="on">
-				<label for="pwd"></label>
-				<input type="password" name="pwd" required placeholder="1234" autocomplete="on">
+				<label for="email"><input type="email" name="email" required placeholder="usuario@correo.cl" autocomplete="on"></label>
+				<label for="pwd"><input type="password" name="pwd" required placeholder="1234" autocomplete="on"></label>
 			</form>
 			<input type="submit" value="Sign Up For Free">
 		</div>
